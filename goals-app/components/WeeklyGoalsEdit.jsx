@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const WeeklyGoalsEdit = ({weeklyGoal, onEdit, onSave}) => {
 
-    const [editableWeeklyGoal, setEditableWeeklyGoal] = useState(weeklyGoal.input);
+    const [editableWeeklyGoal, setEditableWeeklyGoal] = useState('');
 
     const handleChange = (event) => {
         setEditableWeeklyGoal(event.target.value);
@@ -12,6 +12,7 @@ const WeeklyGoalsEdit = ({weeklyGoal, onEdit, onSave}) => {
         event.preventDefault();
         onEdit(weeklyGoal.id, editableWeeklyGoal);
         onSave(false);
+        console.log(weeklyGoal.input)
     }
 
     return (

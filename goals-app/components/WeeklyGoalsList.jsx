@@ -20,7 +20,7 @@ const WeeklyGoalsList = () => {
 
     return (
         <div>
-            {Array(4).fill(true).map((weeklyGoal, i) => <div><label>Week {i+1}</label><WeeklyGoalsItem key={i} weeklyGoal={weeklyGoal} onEdit={editWeeklyGoal}/></div>)}
+            {weeklyGoals.map((weeklyGoal, i) => <div key={i}><label>Week {i}</label><WeeklyGoalsItem key={i} weeklyGoal={weeklyGoal} onEdit={editWeeklyGoal}/></div>)}
         </div>
     )
 }
